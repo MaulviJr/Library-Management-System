@@ -105,7 +105,16 @@ void libraryManagementSystem(Library& library) {
                 cout << "Enter The Title of book you want to lend: ";
                 getline(cin,title);
                 bool isborrowed=library.isBookBorrowed(title);
-                if (isborrowed==false) {
+                bool isExists=library.isBookExists(title);
+
+                if(isExists==false) {
+                    cout << "Book is not here" << endl;
+                    cout << "press enter to continue..." << endl;
+                    cin.ignore();
+                    break;
+                }
+
+                if (isborrowed==false && isExists==true) { // run only if book is not borrowed and also exists
                 library.searchBookbytitle(title);
                 cout << "Now Enter the Id of Book for Lending: ";
                 int id;

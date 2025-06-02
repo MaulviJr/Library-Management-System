@@ -33,6 +33,7 @@ public:
     void returnBook(int id);
     bool isBookBorrowed(const string& title);
     void DisplayBooks();
+    bool isBookExists(const string& title);
 };
 
 #endif

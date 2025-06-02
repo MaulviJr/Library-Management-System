@@ -354,7 +354,33 @@ void Library::DisplayBooks() {
         }
         temp = temp->next;
     }
+    cout <<"Press Enter to continue..." << endl;
+    
+    cin.get();
 }
+
+// Assuming you have this in your Library class
+
+bool Library::isBookExists(const string& title) {
+    Category* currCategory = head;
+    string newtitle=toLowerCase(title);
+    while (currCategory != nullptr) {
+        Book* currBook = currCategory->bookHead;
+        while (currBook != nullptr) {
+            if (toLowerCase(currBook->title) == title) {
+                // Found the book
+                return true;
+            }
+            currBook = currBook->next;
+        }
+        currCategory = currCategory->next;
+    }
+
+    // Book not found
+    return false;
+}
+
+
 bool Library::isBookBorrowed(const string& title) {
     string newTitle= toLowerCase(title);
     Category* currCategory = head;
