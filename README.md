@@ -83,9 +83,12 @@ It demonstrates practical use of **Data Structures** like **Linked Lists**, **Ve
 
 ## 🔮 Future Enhancements (Optional)
 
-- 🖥️ **GUI Interface**: Build a graphical frontend for user interaction.
-- 🔒 **Encapsulation**: Improve object-oriented design by applying encapsulation principles.
-- 🔃 **Sorting Features**: Add support to sort books by title, author, etc.
+-  **GUI Interface**: Build a graphical frontend for user interaction.
+-  **Encapsulation**: Improve object-oriented design by applying encapsulation principles.
+-  **Sorting Features**: Add support to sort books by title, author, etc.
+-  **Search Using Tree**: Using an AVL tree and search by ID for faster search.
+-  **Implementing User Options**: Only Admin options are there at the moment.
+-  **Adding Quantity Feature**: Adding Quantity of Books.
 
 ---
 
